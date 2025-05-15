@@ -63,7 +63,7 @@ class FreezeWidgetState extends State<FreezeWidget> with SingleTickerProviderSta
                 ..setImageSampler(0, image);
               canvas.drawRect(Offset.zero & size, Paint()..shader = shader);
             },
-            child: Image.asset('assets/cat.jpg')
+            child: Image.asset('assets/cat.jpg', width: 500)
           ),
         ),
         ShaderBuilder(

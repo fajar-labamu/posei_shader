@@ -91,45 +91,48 @@ class CreditCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.deepPurple,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      elevation: 6,
-      child: Container(
-        width: double.infinity,
-        height: 200,
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          gradient: const LinearGradient(
-            colors: [Colors.deepPurple, Colors.deepPurpleAccent],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+    return SizedBox(
+      width: 500,
+      child: Card(
+        color: Colors.deepPurple,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        elevation: 6,
+        child: Container(
+          width: double.infinity,
+          height: 200,
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            gradient: const LinearGradient(
+              colors: [Colors.deepPurple, Colors.deepPurpleAccent],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('CREDIT CARD', style: TextStyle(color: Colors.white70, fontSize: 16)),
-            const Spacer(),
-            Text(
-              cardNumber,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 22,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.bold,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('CREDIT CARD', style: TextStyle(color: Colors.white70, fontSize: 16)),
+              const Spacer(),
+              Text(
+                cardNumber,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('CARDHOLDER\n$cardHolder', style: const TextStyle(color: Colors.white70, fontSize: 12)),
-                Text('EXPIRES\n$expiryDate', style: const TextStyle(color: Colors.white70, fontSize: 12)),
-              ],
-            ),
-          ],
+              const SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('CARDHOLDER\n$cardHolder', style: const TextStyle(color: Colors.white70, fontSize: 12)),
+                  Text('EXPIRES\n$expiryDate', style: const TextStyle(color: Colors.white70, fontSize: 12)),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
